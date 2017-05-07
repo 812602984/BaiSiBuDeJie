@@ -20,9 +20,9 @@
 
 + (void)initialize
 {
-    [self getIvars];
-    [self getPropertyList];
-    [self getMethods];
+//    [self getIvars];
+//    [self getPropertyList];
+//    [self getMethods];
 }
 
 /**

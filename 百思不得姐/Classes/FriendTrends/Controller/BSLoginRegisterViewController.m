@@ -20,11 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 //关闭按钮
 - (IBAction)closeButtonClick:(UIButton *)sender {
+     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -55,14 +62,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-/**
- *  让当前控制器的状态栏颜色为白色
- */
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
 }
 
 @end
