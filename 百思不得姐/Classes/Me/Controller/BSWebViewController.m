@@ -1,0 +1,118 @@
+//
+//  BSWebViewController.m
+//  百思不得姐
+//
+//  Created by mac on 2017/5/2.
+//  Copyright © 2017年 shaowu. All rights reserved.
+//
+
+#import "BSWebViewController.h"
+#import <WebKit/WebKit.h>
+
+#define SystemUnderIos8 [[UIDevice currentDevice].systemVersion floatValue] < 8.0
+
+@interface BSWebViewController ()<UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate>
+
+//webView在ios 9以上系统加载缓慢，ios 8有了WkWebview
+@property (nonatomic, weak) UIWebView *webView;
+
+@property (nonatomic, weak) WKWebView *wkWebview;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goBackBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goForwardBtn;
+
+@end
+
+@implementation BSWebViewController
+
+- (UIWebView *)webView
+{
+    if (_webView == nil) {
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, BSScreenW, self.view.height-44)];
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+        [self.view addSubview:webView];
+        _webView = webView;
+    }
+    return _webView;
+}
+
+- (WKWebView *)wkWebview
+{
+    if (_wkWebview == nil) {
+        WKWebView *wkWebview = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, BSScreenW, self.view.height-44)];
+        [wkWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+        [self.view addSubview:wkWebview];
+        _wkWebview = wkWebview;
+    }
+    return _wkWebview;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    if (SystemUnderIos8) {
+        
+        self.webView.delegate = self;
+    }else {
+        self.wkWebview.navigationDelegate = self;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIWebViewDelegate
+//WebView加载完成
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    self.goBackBtn.enabled = webView.canGoBack;
+    self.goForwardBtn.enabled = webView.canGoForward;
+}
+
+//当error.code=-999时，请求被取消
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    if (error.code == -999) {
+        return;
+    }
+}
+
+#pragma mark - WKWebViewDelegate
+//WKWebView加载完成
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
+    self.goBackBtn.enabled = webView.canGoBack;
+    self.goForwardBtn.enabled = webView.canGoForward;
+}
+
+#pragma UIToolBarItem
+- (IBAction)backClick:(id)sender {
+    if ([self.webView canGoBack] && SystemUnderIos8) {
+        [self.webView goBack];
+    }else {
+        if (self.wkWebview && [self.wkWebview canGoBack]) {
+            [self.wkWebview goBack];
+        }
+    }
+}
+
+- (IBAction)forwardClick:(id)sender {
+    if ([self.webView canGoForward] && SystemUnderIos8) {
+        [self.webView goForward];
+    }else{
+        if ( self.wkWebview && [self.wkWebview canGoForward]) {
+            [self.wkWebview goForward];
+        }
+    }
+}
+
+- (IBAction)refreshClick:(id)sender {
+    if (SystemUnderIos8) {
+        [self.webView reload];
+    }else{
+        [self.wkWebview reload];
+    }
+}
+
+@end

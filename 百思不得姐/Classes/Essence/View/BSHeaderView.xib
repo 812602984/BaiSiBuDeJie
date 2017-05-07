@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgA-ow-hV9">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                    <state key="normal" title="第一个"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="rGG-38-ayp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyI-Qi-vBV" userLabel="第二个">
+                    <rect key="frame" x="94" y="0.0" width="94" height="30"/>
+                    <state key="normal" title="第二个"/>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqn-jx-LSp" userLabel="第三个">
+                    <rect key="frame" x="188" y="0.0" width="94" height="30"/>
+                    <state key="normal" title="第二个"/>
+                </button>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUN-Fd-Jmg" userLabel="第四个">
+                    <rect key="frame" x="282" y="0.0" width="94" height="30"/>
+                    <state key="normal" title="第四个"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wgA-ow-hV9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1ud-T2-D0s"/>
+                <constraint firstItem="wgA-ow-hV9" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.25" id="2hJ-5Y-p7Z"/>
+                <constraint firstAttribute="bottom" secondItem="wgA-ow-hV9" secondAttribute="bottom" id="5UB-qI-5wL"/>
+                <constraint firstItem="oyI-Qi-vBV" firstAttribute="leading" secondItem="wgA-ow-hV9" secondAttribute="trailing" id="F8d-mh-3xl"/>
+                <constraint firstItem="PUN-Fd-Jmg" firstAttribute="leading" secondItem="kqn-jx-LSp" secondAttribute="trailing" id="HMN-rC-WZG"/>
+                <constraint firstItem="kqn-jx-LSp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IWU-5x-BDN"/>
+                <constraint firstItem="oyI-Qi-vBV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KA4-nF-jYp"/>
+                <constraint firstItem="kqn-jx-LSp" firstAttribute="width" secondItem="wgA-ow-hV9" secondAttribute="width" id="OKc-iC-4cW"/>
+                <constraint firstItem="kqn-jx-LSp" firstAttribute="leading" secondItem="oyI-Qi-vBV" secondAttribute="trailing" id="RAv-EA-8Ed"/>
+                <constraint firstItem="PUN-Fd-Jmg" firstAttribute="width" secondItem="wgA-ow-hV9" secondAttribute="width" id="UYQ-Fb-GbB"/>
+                <constraint firstItem="PUN-Fd-Jmg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ViB-oo-8xQ"/>
+                <constraint firstItem="oyI-Qi-vBV" firstAttribute="width" secondItem="wgA-ow-hV9" secondAttribute="width" id="cb1-Di-ylv"/>
+                <constraint firstItem="wgA-ow-hV9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sYh-Jq-Qxv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="223" y="-37"/>
+        </view>
+    </objects>
+</document>

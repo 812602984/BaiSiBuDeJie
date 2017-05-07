@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by mac on 2017/4/8.
+//  Copyright © 2017年 shaowu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+BSExtension.h"
+#import "UIBarButtonItem+BSExtension.h"
+
+#ifdef DEBUG
+#define BSLog(...) NSLog(__VA_ARGS__)
+#else
+#define BSLog(...)
+#endif
+
+#define BSLogFunc BSLog(@"%s",__func__);
+
+#endif
