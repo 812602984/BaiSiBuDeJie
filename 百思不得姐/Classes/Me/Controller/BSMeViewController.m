@@ -10,6 +10,8 @@
 #import "BSMineCell.h"
 #import "BSLoginRegisterViewController.h"
 #import "BSSquareView.h"
+#import "BSAccountTool.h"
+#import "BSAccount.h"
 
 @interface BSMeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -83,9 +85,18 @@
 {
     BSMineCell *cell = [[BSMineCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"mine"];
     if (indexPath.section == 0) {
+        BSAccount *account = [BSAccountTool getAccount];
+        if (account) {
+            cell.textLabel.text = account.name?:[NSString stringWithFormat:@"uid:%@",account.uid];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.detailTextLabel.text = @"已登录";
+            cell.userInteractionEnabled = NO;
+        }else{
+            cell.userInteractionEnabled = YES;
+            cell.textLabel.text = @"登录／注册";
+            cell.detailTextLabel.text = @"未登录";
+        }
         cell.imageView.image = [UIImage imageNamed:@"mine_icon_nearby"];
-        cell.textLabel.text = @"登录／注册";
-        cell.detailTextLabel.text = @"nihao";
     }else {
         cell.textLabel.text = @"离线下载";
     }
@@ -96,7 +107,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
+    BSAccount *account = [BSAccountTool getAccount];
+
+    if (indexPath.section == 0 && account == nil) {
         BSLoginRegisterViewController *loginVc = [[BSLoginRegisterViewController alloc] init];
         [self presentViewController:loginVc animated:YES completion:nil];
     }

@@ -169,18 +169,33 @@
     }
     
     //3.将照片从相机胶卷移到自定义相册,performChangesAndWait内部不能在调用自己，否则死锁
-    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+//    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+//        PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:createdCollection];
+//        //把照片插入0的位置，作为相册的封面图片
+//        [request insertAssets:assets atIndexes:[NSIndexSet indexSetWithIndex:0]];
+//
+//    } error:&error];
+//    
+//    if (error) {
+//        [SVProgressHUD showErrorWithStatus:@"保存图片失败"];
+//    }else {
+//        [SVProgressHUD showSuccessWithStatus:@"保存图片成功"];
+//    }
+
+    
+    //上方注释的是同步执行的，可能会卡住
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:createdCollection];
         //把照片插入0的位置，作为相册的封面图片
         [request insertAssets:assets atIndexes:[NSIndexSet indexSetWithIndex:0]];
-
-    } error:&error];
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:@"保存图片失败"];
+        }else {
+            [SVProgressHUD showSuccessWithStatus:@"保存图片成功"];
+        }
+    }];
     
-    if (error) {
-        [SVProgressHUD showErrorWithStatus:@"保存图片失败"];
-    }else {
-        [SVProgressHUD showSuccessWithStatus:@"保存图片成功"];
-    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo

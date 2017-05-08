@@ -124,7 +124,7 @@
     
     self.footerRefresh = YES;
     
-    //结束上拉
+    //结束下拉
     [self.tableView.mj_header endRefreshing];
     
     self.currentPage++;
@@ -225,7 +225,7 @@
 {
     //取出帖子模型
     BSTopic *topic = self.topics[indexPath.row];
-    
+
     //返回模型对应的cell高度
     return topic.cellHeight;
 }

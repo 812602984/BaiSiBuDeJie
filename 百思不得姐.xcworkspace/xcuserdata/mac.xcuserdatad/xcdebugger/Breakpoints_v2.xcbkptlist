@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/Classes/Me/View/BSSquareView.m"
-            timestampString = "515839770.50647"
+            filePath = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/Classes/FriendTrends/Controller/BSFriendTrendsViewController.m"
+            timestampString = "515916848.476791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-initWithFrame:"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/Classes/Me/Controller/BSMeViewController.m"
+            timestampString = "515920178.493799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/Classes/Others/Controller/BSNavigationController.m"
+            timestampString = "515947976.048518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-gestureRecognizer:shouldReceiveTouch:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

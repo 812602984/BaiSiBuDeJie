@@ -8,7 +8,7 @@
 
 #import "BSNavigationController.h"
 
-@interface BSNavigationController ()
+@interface BSNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -30,6 +30,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //添加一个全屏滑动返回的功能
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    //设置delegate，控制只有非根控制器才需要滑动返回
+    pan.delegate = self;
+    //禁止之前的UIEdgePanGestureRecognizer
+    self.interactivePopGestureRecognizer.enabled = NO;
+    
+    /*滑动返回手势失效：1.手势被清空 2.手势冲突 3.手势的代理做了一些事情（这里属于此种情况）*/
+//    self.interactivePopGestureRecognizer.delegate = self;
     
     //写在这里每次push都会调用，程序启动会调用四次
 //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
@@ -62,6 +73,13 @@
 - (void)back
 {
     [self popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+//决定是否出发手势
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return self.childViewControllers.count > 1;
 }
 
 @end

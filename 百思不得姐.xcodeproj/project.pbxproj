@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402FCD11EC01D1500212C36 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCCB1EC01D1500212C36 /* BSLoginRegisterViewController.m */; };
+		0402FCD21EC01D1500212C36 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0402FCCC1EC01D1500212C36 /* BSLoginRegisterViewController.xib */; };
+		0402FCD31EC01D1500212C36 /* BSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCCE1EC01D1500212C36 /* BSOAuthViewController.m */; };
+		0402FCD61EC01D7F00212C36 /* BSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCD51EC01D7F00212C36 /* BSAccount.m */; };
+		0402FCDC1EC027F000212C36 /* BSAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCDB1EC027F000212C36 /* BSAccountTool.m */; };
 		0405047A1E9A3BE000DA93C9 /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040504781E9A3BDF00DA93C9 /* BSRecommendViewController.m */; };
 		0405047B1E9A3BE000DA93C9 /* BSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040504791E9A3BE000DA93C9 /* BSRecommendViewController.xib */; };
 		0412D4FC1E9F2830004EB533 /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412D4FB1E9F2830004EB533 /* BSTopic.m */; };
@@ -15,8 +20,6 @@
 		0412D5071E9F4642004EB533 /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0412D5051E9F4642004EB533 /* BSTopicCell.xib */; };
 		0412D50A1E9F95BC004EB533 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412D5091E9F95BC004EB533 /* NSDate+BSExtension.m */; };
 		0412D5301E9FC193004EB533 /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412D52F1E9FC193004EB533 /* BSTopicViewController.m */; };
-		041C0A281E9C7A500087DCD3 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C0A261E9C7A500087DCD3 /* BSLoginRegisterViewController.m */; };
-		041C0A291E9C7A500087DCD3 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041C0A271E9C7A500087DCD3 /* BSLoginRegisterViewController.xib */; };
 		041C0A2C1E9C90CE0087DCD3 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C0A2B1E9C90CE0087DCD3 /* BSVerticalButton.m */; };
 		041C0A2F1E9CB5CB0087DCD3 /* BSTextFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C0A2E1E9CB5CB0087DCD3 /* BSTextFile.m */; };
 		041C0A321E9CF0740087DCD3 /* BSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C0A311E9CF0740087DCD3 /* BSPushGuideView.m */; };
@@ -83,6 +86,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402FCCA1EC01D1500212C36 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
+		0402FCCB1EC01D1500212C36 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
+		0402FCCC1EC01D1500212C36 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		0402FCCD1EC01D1500212C36 /* BSOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSOAuthViewController.h; sourceTree = "<group>"; };
+		0402FCCE1EC01D1500212C36 /* BSOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSOAuthViewController.m; sourceTree = "<group>"; };
+		0402FCD41EC01D7F00212C36 /* BSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAccount.h; sourceTree = "<group>"; };
+		0402FCD51EC01D7F00212C36 /* BSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAccount.m; sourceTree = "<group>"; };
+		0402FCDA1EC027F000212C36 /* BSAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAccountTool.h; sourceTree = "<group>"; };
+		0402FCDB1EC027F000212C36 /* BSAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAccountTool.m; sourceTree = "<group>"; };
 		040504771E9A3BDF00DA93C9 /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
 		040504781E9A3BDF00DA93C9 /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
 		040504791E9A3BE000DA93C9 /* BSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendViewController.xib; sourceTree = "<group>"; };
@@ -97,9 +109,6 @@
 		0412D5091E9F95BC004EB533 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
 		0412D52E1E9FC193004EB533 /* BSTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicViewController.h; sourceTree = "<group>"; };
 		0412D52F1E9FC193004EB533 /* BSTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicViewController.m; sourceTree = "<group>"; };
-		041C0A251E9C7A500087DCD3 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
-		041C0A261E9C7A500087DCD3 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
-		041C0A271E9C7A500087DCD3 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		041C0A2A1E9C90CE0087DCD3 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVerticalButton.h; sourceTree = "<group>"; };
 		041C0A2B1E9C90CE0087DCD3 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
 		041C0A2D1E9CB5CB0087DCD3 /* BSTextFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextFile.h; sourceTree = "<group>"; };
@@ -227,6 +236,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0402FCC81EC01D1500212C36 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0402FCC91EC01D1500212C36 /* Controller */,
+				0402FCCF1EC01D1500212C36 /* Model */,
+				0402FCD01EC01D1500212C36 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0402FCC91EC01D1500212C36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0402FCCA1EC01D1500212C36 /* BSLoginRegisterViewController.h */,
+				0402FCCB1EC01D1500212C36 /* BSLoginRegisterViewController.m */,
+				0402FCCC1EC01D1500212C36 /* BSLoginRegisterViewController.xib */,
+				0402FCCD1EC01D1500212C36 /* BSOAuthViewController.h */,
+				0402FCCE1EC01D1500212C36 /* BSOAuthViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0402FCCF1EC01D1500212C36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0402FCD41EC01D7F00212C36 /* BSAccount.h */,
+				0402FCD51EC01D7F00212C36 /* BSAccount.m */,
+				0402FCDA1EC027F000212C36 /* BSAccountTool.h */,
+				0402FCDB1EC027F000212C36 /* BSAccountTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0402FCD01EC01D1500212C36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04BFD6C01E97D05A00BBA029 = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +407,7 @@
 		04D373DE1E9931BD005894AD /* FriendTrends */ = {
 			isa = PBXGroup;
 			children = (
+				0402FCC81EC01D1500212C36 /* Login */,
 				04D373DF1E9931BD005894AD /* Controller */,
 				04D373E21E9931BD005894AD /* Model */,
 				04D373E31E9931BD005894AD /* View */,
@@ -374,9 +424,6 @@
 				040504771E9A3BDF00DA93C9 /* BSRecommendViewController.h */,
 				040504781E9A3BDF00DA93C9 /* BSRecommendViewController.m */,
 				040504791E9A3BE000DA93C9 /* BSRecommendViewController.xib */,
-				041C0A251E9C7A500087DCD3 /* BSLoginRegisterViewController.h */,
-				041C0A261E9C7A500087DCD3 /* BSLoginRegisterViewController.m */,
-				041C0A271E9C7A500087DCD3 /* BSLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -686,10 +733,10 @@
 				04CEA55E1E99E61B00B45076 /* BSFriendTrendsViewController.xib in Resources */,
 				04A0243A1E9BCF4100006DEE /* BSRecommendTagsCell.xib in Resources */,
 				04CF3F191EA3B83900A852AC /* BSTopicVideoView.xib in Resources */,
+				0402FCD21EC01D1500212C36 /* BSLoginRegisterViewController.xib in Resources */,
 				04F4D8711EB87FE80089171C /* BSPublishView.xib in Resources */,
 				04CF3F141EA3A90700A852AC /* BSTopicVoiceView.xib in Resources */,
 				04F4D86F1EB87FE80089171C /* BSPublishViewController.xib in Resources */,
-				041C0A291E9C7A500087DCD3 /* BSLoginRegisterViewController.xib in Resources */,
 				04EF24271EA1CF7400A8917A /* BSTopicShowPictureController.xib in Resources */,
 				04BFD6D91E97D05A00BBA029 /* Assets.xcassets in Resources */,
 				04F4D85E1EB825DF0089171C /* BSWebViewController.xib in Resources */,
@@ -753,6 +800,7 @@
 			files = (
 				04C163111EA0807D0027A5CA /* BSTopicPictureView.m in Sources */,
 				04B8FE151E9A547200D0A1B8 /* BSRecommendCategory.m in Sources */,
+				0402FCDC1EC027F000212C36 /* BSAccountTool.m in Sources */,
 				04B8FE191E9A583900D0A1B8 /* BSRecommendCategoryCell.m in Sources */,
 				04CA442C1EAA007100929770 /* BSCommentViewController.m in Sources */,
 				04EF24261EA1CF7400A8917A /* BSTopicShowPictureController.m in Sources */,
@@ -761,6 +809,7 @@
 				04D298A91EB2233000F0C18F /* BSCommentCell.m in Sources */,
 				0432EC961EA7A2A80012CEBC /* BSComment.m in Sources */,
 				0429044E1EB77BBC008E2D3D /* BSSquare.m in Sources */,
+				0402FCD61EC01D7F00212C36 /* BSAccount.m in Sources */,
 				042904481EB7695A008E2D3D /* BSMineCell.m in Sources */,
 				0429044B1EB77540008E2D3D /* BSSquareView.m in Sources */,
 				04D374071E9931BD005894AD /* main.m in Sources */,
@@ -782,11 +831,12 @@
 				04A887D61EB5DBF700A5F5D3 /* BSTopWindow.m in Sources */,
 				04DAA2641E9BB06700728B9C /* BSRecommendTagsController.m in Sources */,
 				04F4D86E1EB87FE80089171C /* BSPublishViewController.m in Sources */,
-				041C0A281E9C7A500087DCD3 /* BSLoginRegisterViewController.m in Sources */,
+				0402FCD31EC01D1500212C36 /* BSOAuthViewController.m in Sources */,
 				042904421EB6CF22008E2D3D /* UIImage+BSExtension.m in Sources */,
 				04AD18151E9B476B00B06249 /* BSRecommendUser.m in Sources */,
 				04D374031E9931BD005894AD /* BSFriendTrendsViewController.m in Sources */,
 				04D298A01EB1CC3200F0C18F /* BSHeaderView.m in Sources */,
+				0402FCD11EC01D1500212C36 /* BSLoginRegisterViewController.m in Sources */,
 				04D374051E9931BD005894AD /* AppDelegate.m in Sources */,
 				041C0A321E9CF0740087DCD3 /* BSPushGuideView.m in Sources */,
 				0412D5301E9FC193004EB533 /* BSTopicViewController.m in Sources */,
@@ -906,6 +956,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4V8XWSCH76;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Main/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
@@ -914,6 +965,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.heima.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -923,6 +975,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4V8XWSCH76;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Main/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
@@ -931,6 +984,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.heima.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

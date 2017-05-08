@@ -25,7 +25,7 @@
         self.backgroundView = bgView;
         
         self.textLabel.textColor = [UIColor darkGrayColor];
-        self.textLabel.font = [UIFont systemFontOfSize:14];
+        self.textLabel.font = self.detailTextLabel.font = [UIFont systemFontOfSize:14];
     }
     return self;
 }

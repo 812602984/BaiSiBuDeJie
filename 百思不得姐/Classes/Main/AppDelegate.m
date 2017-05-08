@@ -41,7 +41,7 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    BSLog(@"%@",viewController);
+//    BSLog(@"%@",viewController);
     [[NSNotificationCenter defaultCenter] postNotificationName:@"BSDidSelectedTabBarNotification" object:nil userInfo:nil];
 }
 

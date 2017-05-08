@@ -10,4 +10,5 @@
 
 @interface BSFriendTrendsViewController : UIViewController
 
+
 @end
