@@ -29,6 +29,15 @@
     [self setupTableView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ([BSAccountTool getAccount]) {
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+    }
+}
+
 - (void)setupTableView
 {
     [self.tableView registerClass:[BSMineCell class] forCellReuseIdentifier:@"mine"];
