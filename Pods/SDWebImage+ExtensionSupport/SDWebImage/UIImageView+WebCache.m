@@ -56,6 +56,21 @@ static char imageURLKey;
                 if (!wself) return;
                 if (image) {
                     wself.image = image;
+#warning 自己修改，需要渐变效果
+//                     原理解析:
+//                    当开始加载图片的时候,透明度为0,;
+//                    如果图片已经加载到缓存里边,那么在1秒后,动画把透明变为1;
+//                    如果加载到的图片,则不需要渐变效果,透明度设为1就可以
+                    
+                    wself.alpha = 0;
+                    if (cacheType != SDImageCacheTypeMemory) {
+                        [UIView animateWithDuration:1 animations:^{
+                            wself.alpha = 1;
+                        }];
+                    }else {
+                        wself.alpha = 1;
+                    }
+#warning 修改结束
                     [wself setNeedsLayout];
                 } else {
                     if ((options & SDWebImageDelayPlaceholder)) {

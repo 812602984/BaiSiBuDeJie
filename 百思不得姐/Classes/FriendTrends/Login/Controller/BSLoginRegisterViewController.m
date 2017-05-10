@@ -9,10 +9,16 @@
 #import "BSLoginRegisterViewController.h"
 #import "BSOAuthViewController.h"
 
-@interface BSLoginRegisterViewController ()
+@interface BSLoginRegisterViewController ()<UITextFieldDelegate>
 
 //登录框距离控制器view左边的距离
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftmargin;
+
+//账号
+@property (weak, nonatomic) IBOutlet UITextField *accountTextField;
+
+//密码
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -23,6 +29,8 @@
     // Do any additional setup after loading the view from its nib.
  
     [self.navigationController setNavigationBarHidden:YES];
+    
+    self.accountTextField.delegate = self.passwordTextField.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -88,6 +96,18 @@
 - (IBAction)weixinLogin
 {
     
+}
+
+#pragma mark - textField delegate
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self resignFirstResponder];
+    return NO;
 }
 
 @end

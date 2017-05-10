@@ -120,7 +120,8 @@
 
     if (indexPath.section == 0 && account == nil) {
         BSLoginRegisterViewController *loginVc = [[BSLoginRegisterViewController alloc] init];
-        [self presentViewController:loginVc animated:YES completion:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVc];
+        [self presentViewController:nav animated:YES completion:nil];
     }
 }
 

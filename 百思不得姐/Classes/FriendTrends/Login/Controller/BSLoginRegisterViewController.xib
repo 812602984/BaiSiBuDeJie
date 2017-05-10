@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSLoginRegisterViewController">
             <connections>
+                <outlet property="accountTextField" destination="PwQ-2s-F3Y" id="fzR-pi-a1t"/>
                 <outlet property="loginViewLeftmargin" destination="dpC-NF-yVY" id="rPn-cu-FjO"/>
+                <outlet property="passwordTextField" destination="hvt-vz-frH" id="doe-s2-OR0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -439,7 +441,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hvt-vz-frH" userLabel="密码" customClass="BSTextFile">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hvt-vz-frH" userLabel="密码">
                                     <rect key="frame" x="10" y="46" width="246" height="46"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -675,7 +677,7 @@
                     <include reference="kpS-BV-c2p"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="-92" y="-247"/>
+            <point key="canvasLocation" x="-92.5" y="-247.5"/>
         </view>
     </objects>
     <resources>
