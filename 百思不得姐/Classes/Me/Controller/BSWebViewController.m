@@ -10,8 +10,6 @@
 #import <WebKit/WebKit.h>
 #import "BSWebviewProgressLine.h"
 
-#define SystemUnderIos8 [[UIDevice currentDevice].systemVersion floatValue] < 8.0
-
 @interface BSWebViewController ()<UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate>
 
 //webView在ios 9以上系统加载缓慢，ios 8有了WkWebview
@@ -70,7 +68,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (SystemUnderIos8) {
+    if (SystemUnderVersion(8.0)) {
         
         self.webView.delegate = self;
     }else {
@@ -130,7 +128,7 @@
 
 #pragma UIToolBarItem
 - (IBAction)backClick:(id)sender {
-    if ([self.webView canGoBack] && SystemUnderIos8) {
+    if ([self.webView canGoBack] && SystemUnderVersion(8.0)) {
         [self.webView goBack];
     }else {
         if (self.wkWebview && [self.wkWebview canGoBack]) {
@@ -140,7 +138,7 @@
 }
 
 - (IBAction)forwardClick:(id)sender {
-    if ([self.webView canGoForward] && SystemUnderIos8) {
+    if ([self.webView canGoForward] && SystemUnderVersion(8.0)) {
         [self.webView goForward];
     }else{
         if ( self.wkWebview && [self.wkWebview canGoForward]) {
@@ -150,7 +148,7 @@
 }
 
 - (IBAction)refreshClick:(id)sender {
-    if (SystemUnderIos8) {
+    if (SystemUnderVersion(8.0)) {
         [self.webView reload];
     }else{
         [self.wkWebview reload];

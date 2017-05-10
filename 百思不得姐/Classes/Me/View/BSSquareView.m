@@ -13,6 +13,7 @@
 #import "BSSquareButton.h"
 #import <UIButton+WebCache.h>
 #import "BSWebViewController.h"
+#import <SafariServices/SafariServices.h>
 
 @interface BSSquareView ()
 
@@ -79,15 +80,24 @@
 
 - (void)btnClick:(BSSquareButton *)btn
 {
-    
-    if ([btn.square.url hasPrefix:@"http"]) {
-        BSWebViewController *webView = [[BSWebViewController alloc] initWithNibName:@"BSWebViewController" bundle:nil];
-        webView.url = btn.square.url;
-        webView.title = btn.square.name;
-        
+    NSString *url = btn.square.url;
+    if ([url hasPrefix:@"http"]) {
         UITabBarController *tabBar = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
         UINavigationController *nav = tabBar.selectedViewController;
-        [nav pushViewController:webView animated:YES];
+        if(SystemUnderVersion(9.0)){
+        
+            BSWebViewController *webView = [[BSWebViewController alloc] initWithNibName:@"BSWebViewController" bundle:nil];
+            webView.url = url;
+            webView.title = btn.square.name;
+            
+            
+            [nav pushViewController:webView animated:YES];
+        }else {
+            //ios 9.0的新方法，跳转到safari网页，并且在应用内，建议用modal，模态跳转
+            SFSafariViewController *safariVc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url]];
+//            safariVc.
+            [tabBar presentViewController:safariVc animated:YES completion:nil];
+        }
     }
 }
 
