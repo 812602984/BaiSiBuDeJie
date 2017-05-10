@@ -35,9 +35,11 @@
 - (BSWebviewProgressLine *)progressLine
 {
     if (_progressLine == nil) {
-        BSWebviewProgressLine *progressLine = [[BSWebviewProgressLine alloc] initWithFrame:CGRectMake(0, 64, BSScreenW, 2)];
+        CGRect rect = self.navigationController.navigationBar.bounds;
+        CGFloat height = 2.f;
+        BSWebviewProgressLine *progressLine = [[BSWebviewProgressLine alloc] initWithFrame:CGRectMake(0, rect.size.height - height, BSScreenW, height)];
         progressLine.lineColor = [UIColor blueColor];
-        [self.view addSubview:progressLine];
+        [self.navigationController.navigationBar addSubview:progressLine];
         _progressLine = progressLine;
     }
     return _progressLine;
