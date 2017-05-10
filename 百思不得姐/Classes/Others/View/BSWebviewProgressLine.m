@@ -32,7 +32,7 @@
 - (void)startLoadingAnimation
 {
     self.hidden = NO;
-    self.width = 0;
+    self.width = 3;
     self.alpha = 0;
     __weak UIView *weakSelf = self;
     [UIView animateWithDuration:0.4 animations:^{

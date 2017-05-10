@@ -8,6 +8,7 @@
 
 #import "BSWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "BSWebviewProgressLine.h"
 
 #define SystemUnderIos8 [[UIDevice currentDevice].systemVersion floatValue] < 8.0
 
@@ -17,12 +18,30 @@
 @property (nonatomic, weak) UIWebView *webView;
 
 @property (nonatomic, weak) WKWebView *wkWebview;
+
+//返回按钮
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *goBackBtn;
+
+//前进按钮
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *goForwardBtn;
+
+//网页进度条
+@property (weak, nonatomic) BSWebviewProgressLine *progressLine;
 
 @end
 
 @implementation BSWebViewController
+
+- (BSWebviewProgressLine *)progressLine
+{
+    if (_progressLine == nil) {
+        BSWebviewProgressLine *progressLine = [[BSWebviewProgressLine alloc] initWithFrame:CGRectMake(0, 64, BSScreenW, 2)];
+        progressLine.lineColor = [UIColor blueColor];
+        [self.view addSubview:progressLine];
+        _progressLine = progressLine;
+    }
+    return _progressLine;
+}
 
 - (UIWebView *)webView
 {
@@ -63,9 +82,16 @@
 }
 
 #pragma mark - UIWebViewDelegate
+//WebView开始加载
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+{
+    [self.progressLine startLoadingAnimation];
+}
+
 //WebView加载完成
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [self.progressLine endLoadingAnimation];
     self.goBackBtn.enabled = webView.canGoBack;
     self.goForwardBtn.enabled = webView.canGoForward;
 }
@@ -73,6 +99,7 @@
 //当error.code=-999时，请求被取消
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    [self.progressLine endLoadingAnimation];
     if (error.code == -999) {
         return;
     }
@@ -80,10 +107,23 @@
 
 #pragma mark - WKWebViewDelegate
 //WKWebView加载完成
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+{
+    [self.progressLine startLoadingAnimation];
+}
+
+//WKWebView加载完成
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
+    [self.progressLine endLoadingAnimation];
     self.goBackBtn.enabled = webView.canGoBack;
     self.goForwardBtn.enabled = webView.canGoForward;
+}
+
+//WKWebView加载失败
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
+{
+    [self.progressLine endLoadingAnimation];
 }
 
 #pragma UIToolBarItem

@@ -54,6 +54,7 @@
 		04CF3F141EA3A90700A852AC /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF3F131EA3A90700A852AC /* BSTopicVoiceView.xib */; };
 		04CF3F171EA3B82E00A852AC /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF3F161EA3B82E00A852AC /* BSTopicVideoView.m */; };
 		04CF3F191EA3B83900A852AC /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF3F181EA3B83900A852AC /* BSTopicVideoView.xib */; };
+		04CF66C11EC32461005BD8F0 /* BSWebviewProgressLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF66C01EC32461005BD8F0 /* BSWebviewProgressLine.m */; };
 		04D298A01EB1CC3200F0C18F /* BSHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2989F1EB1CC3200F0C18F /* BSHeaderView.m */; };
 		04D298A21EB1CC5100F0C18F /* BSHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D298A11EB1CC5100F0C18F /* BSHeaderView.xib */; };
 		04D298A51EB1E1A800F0C18F /* BSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D298A41EB1E1A800F0C18F /* BSCommentHeaderView.m */; };
@@ -169,6 +170,8 @@
 		04CF3F151EA3B82E00A852AC /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
 		04CF3F161EA3B82E00A852AC /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
 		04CF3F181EA3B83900A852AC /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
+		04CF66BF1EC32461005BD8F0 /* BSWebviewProgressLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebviewProgressLine.h; sourceTree = "<group>"; };
+		04CF66C01EC32461005BD8F0 /* BSWebviewProgressLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebviewProgressLine.m; sourceTree = "<group>"; };
 		04D2989E1EB1CC3200F0C18F /* BSHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSHeaderView.h; sourceTree = "<group>"; };
 		04D2989F1EB1CC3200F0C18F /* BSHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSHeaderView.m; sourceTree = "<group>"; };
 		04D298A11EB1CC5100F0C18F /* BSHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSHeaderView.xib; sourceTree = "<group>"; };
@@ -589,6 +592,8 @@
 		04D373FF1E9931BD005894AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04CF66BF1EC32461005BD8F0 /* BSWebviewProgressLine.h */,
+				04CF66C01EC32461005BD8F0 /* BSWebviewProgressLine.m */,
 				04D374001E9931BD005894AD /* BSTabBar.h */,
 				04D374011E9931BD005894AD /* BSTabBar.m */,
 				041C0A2D1E9CB5CB0087DCD3 /* BSTextFile.h */,
@@ -824,6 +829,7 @@
 				04386EDC1EA4DCAD00950091 /* UINavigationBar+Awesome.m in Sources */,
 				04D374021E9931BD005894AD /* BSEssenceViewController.m in Sources */,
 				04DAA26C1E9BBB1200728B9C /* BSRecommendTag.m in Sources */,
+				04CF66C11EC32461005BD8F0 /* BSWebviewProgressLine.m in Sources */,
 				04D3740B1E9931BD005894AD /* UIView+BSExtension.m in Sources */,
 				0412D4FC1E9F2830004EB533 /* BSTopic.m in Sources */,
 				042904451EB6D8AD008E2D3D /* UIImageView+BSExtension.m in Sources */,
