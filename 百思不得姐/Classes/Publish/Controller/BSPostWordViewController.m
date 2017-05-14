@@ -9,10 +9,13 @@
 
 #import "BSPostWordViewController.h"
 #import "BSTextView.h"
+#import "BSAddTagToolBar.h"
 
-@interface BSPostWordViewController ()
+@interface BSPostWordViewController ()<UITextViewDelegate>
 
 @property (nonatomic, weak) BSTextView *textView;
+
+@property (nonatomic, weak) BSAddTagToolBar *toolbar;
 
 @end
 
@@ -23,8 +26,38 @@
 
     [self setNav];
     
-    //textView
+    [self setupTextView];
+    
+    [self setupToolBar];
+}
+
+- (void)setupToolBar
+{
+    BSAddTagToolBar *toolbar = [BSAddTagToolBar toolBar];
+    toolbar.width = self.view.width;
+    toolbar.y = self.view.height - toolbar.height;
+    [self.view addSubview:toolbar];
+    self.toolbar = toolbar;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillchangeframe:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)keyboardwillchangeframe:(NSNotification *)noti
+{
+    //键盘最终的frame
+    CGRect keyboardF = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    //动画时间
+    NSTimeInterval duration = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.toolbar.transform = CGAffineTransformMakeTranslation(0, keyboardF.origin.y - self.view.height);
+    }];
+}
+
+- (void)setupTextView
+{
     BSTextView *textView = [[BSTextView alloc] initWithFrame:self.view.bounds];
+    textView.delegate = self;
     textView.placeholder = @"请输入您想要发表的内容 急哦红腹锦鸡斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较斤斤计较会发觉会见阿富汗放假啊喝酒啊发哈哈机会";
     textView.placeholderColor = [UIColor grayColor];
     [self.view addSubview:textView];
@@ -53,18 +86,18 @@
 - (void)cancel
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-//    self.textView.placeholderColor = [UIColor redColor];
-//    self.textView.placeholder = @"hahhahhhahau 胡椒粉的骨灰盒 ";
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        self.textView.text = @"你好你还会减肥的后果和分身乏术恢复宁静空间";
-//    });
-    
+        
 }
 
 - (void)finish
 {
-    BSLog(@"%s",__func__);
+    [self.view endEditing:YES];
+}
+
+#pragma mark - textview delegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.navigationItem.rightBarButtonItem.enabled = textView.hasText;
 }
 
 - (void)didReceiveMemoryWarning {

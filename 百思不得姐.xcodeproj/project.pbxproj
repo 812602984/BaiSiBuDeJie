@@ -30,6 +30,7 @@
 		0429044B1EB77540008E2D3D /* BSSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429044A1EB77540008E2D3D /* BSSquareView.m */; };
 		0429044E1EB77BBC008E2D3D /* BSSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429044D1EB77BBC008E2D3D /* BSSquare.m */; };
 		042904511EB77D21008E2D3D /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 042904501EB77D21008E2D3D /* BSSquareButton.m */; };
+		043133911EC7FF8D0075F5A7 /* BSTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 043133901EC7FF8D0075F5A7 /* BSTagTextField.m */; };
 		0432EC931EA7A0C60012CEBC /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432EC921EA7A0C60012CEBC /* BSUser.m */; };
 		0432EC961EA7A2A80012CEBC /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432EC951EA7A2A80012CEBC /* BSComment.m */; };
 		04386EDC1EA4DCAD00950091 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 04386EDB1EA4DCAD00950091 /* UINavigationBar+Awesome.m */; };
@@ -83,6 +84,9 @@
 		04F4D8701EB87FE80089171C /* BSPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D86B1EB87FE80089171C /* BSPublishView.m */; };
 		04F4D8711EB87FE80089171C /* BSPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D86C1EB87FE80089171C /* BSPublishView.xib */; };
 		04F4D8741EB8800C0089171C /* BSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D8731EB8800C0089171C /* BSTextView.m */; };
+		04FE821C1EC5927000589C32 /* BSAddTagToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE821B1EC5927000589C32 /* BSAddTagToolBar.m */; };
+		04FE821E1EC5928B00589C32 /* BSAddTagToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE821D1EC5928B00589C32 /* BSAddTagToolBar.xib */; };
+		04FE82211EC73D5E00589C32 /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE82201EC73D5E00589C32 /* BSAddTagViewController.m */; };
 		FB078BC64350D342A6716981 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 579C9B476196CEA5047DB91E /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +133,8 @@
 		0429044D1EB77BBC008E2D3D /* BSSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquare.m; sourceTree = "<group>"; };
 		0429044F1EB77D21008E2D3D /* BSSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquareButton.h; sourceTree = "<group>"; };
 		042904501EB77D21008E2D3D /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
+		0431338F1EC7FF8D0075F5A7 /* BSTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagTextField.h; sourceTree = "<group>"; };
+		043133901EC7FF8D0075F5A7 /* BSTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagTextField.m; sourceTree = "<group>"; };
 		0432EC911EA7A0C60012CEBC /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
 		0432EC921EA7A0C60012CEBC /* BSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUser.m; sourceTree = "<group>"; };
 		0432EC941EA7A2A80012CEBC /* BSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComment.h; sourceTree = "<group>"; };
@@ -222,6 +228,11 @@
 		04F4D86C1EB87FE80089171C /* BSPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishView.xib; sourceTree = "<group>"; };
 		04F4D8721EB8800C0089171C /* BSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextView.h; sourceTree = "<group>"; };
 		04F4D8731EB8800C0089171C /* BSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextView.m; sourceTree = "<group>"; };
+		04FE821A1EC5927000589C32 /* BSAddTagToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagToolBar.h; sourceTree = "<group>"; };
+		04FE821B1EC5927000589C32 /* BSAddTagToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagToolBar.m; sourceTree = "<group>"; };
+		04FE821D1EC5928B00589C32 /* BSAddTagToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAddTagToolBar.xib; sourceTree = "<group>"; };
+		04FE821F1EC73D5E00589C32 /* BSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagViewController.h; sourceTree = "<group>"; };
+		04FE82201EC73D5E00589C32 /* BSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagViewController.m; sourceTree = "<group>"; };
 		579C9B476196CEA5047DB91E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A4FA987E6F6CBC2EE6EBCF /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		FE302239786B6655723FE5C1 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -623,6 +634,8 @@
 				04F4D8651EB87FE80089171C /* BSPublishViewController.h */,
 				04F4D8661EB87FE80089171C /* BSPublishViewController.m */,
 				04F4D8671EB87FE80089171C /* BSPublishViewController.xib */,
+				04FE821F1EC73D5E00589C32 /* BSAddTagViewController.h */,
+				04FE82201EC73D5E00589C32 /* BSAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -642,6 +655,11 @@
 				04F4D86C1EB87FE80089171C /* BSPublishView.xib */,
 				04F4D8721EB8800C0089171C /* BSTextView.h */,
 				04F4D8731EB8800C0089171C /* BSTextView.m */,
+				04FE821A1EC5927000589C32 /* BSAddTagToolBar.h */,
+				04FE821B1EC5927000589C32 /* BSAddTagToolBar.m */,
+				04FE821D1EC5928B00589C32 /* BSAddTagToolBar.xib */,
+				0431338F1EC7FF8D0075F5A7 /* BSTagTextField.h */,
+				043133901EC7FF8D0075F5A7 /* BSTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -735,6 +753,7 @@
 				04D298AA1EB2233000F0C18F /* BSCommentCell.xib in Resources */,
 				04C163131EA0809A0027A5CA /* BSTopicPictureView.xib in Resources */,
 				04B8FE1A1E9A583900D0A1B8 /* BSRecommendCategoryCell.xib in Resources */,
+				04FE821E1EC5928B00589C32 /* BSAddTagToolBar.xib in Resources */,
 				04CEA55E1E99E61B00B45076 /* BSFriendTrendsViewController.xib in Resources */,
 				04A0243A1E9BCF4100006DEE /* BSRecommendTagsCell.xib in Resources */,
 				04CF3F191EA3B83900A852AC /* BSTopicVideoView.xib in Resources */,
@@ -839,9 +858,12 @@
 				04F4D86E1EB87FE80089171C /* BSPublishViewController.m in Sources */,
 				0402FCD31EC01D1500212C36 /* BSOAuthViewController.m in Sources */,
 				042904421EB6CF22008E2D3D /* UIImage+BSExtension.m in Sources */,
+				04FE82211EC73D5E00589C32 /* BSAddTagViewController.m in Sources */,
 				04AD18151E9B476B00B06249 /* BSRecommendUser.m in Sources */,
+				04FE821C1EC5927000589C32 /* BSAddTagToolBar.m in Sources */,
 				04D374031E9931BD005894AD /* BSFriendTrendsViewController.m in Sources */,
 				04D298A01EB1CC3200F0C18F /* BSHeaderView.m in Sources */,
+				043133911EC7FF8D0075F5A7 /* BSTagTextField.m in Sources */,
 				0402FCD11EC01D1500212C36 /* BSLoginRegisterViewController.m in Sources */,
 				04D374051E9931BD005894AD /* AppDelegate.m in Sources */,
 				041C0A321E9CF0740087DCD3 /* BSPushGuideView.m in Sources */,

@@ -38,6 +38,10 @@
     pan.delegate = self;
     //禁止之前的UIEdgePanGestureRecognizer
     self.interactivePopGestureRecognizer.enabled = NO;
+     
+    /*解决重写返回按钮，滑动返回实效，一行代码搞定
+    self.interactivePopGestureRecognizer.delegate = (id <UIGestureRecognizerDelegate>) self;
+    */
     
     /*滑动返回手势失效：1.手势被清空 2.手势冲突 3.手势的代理做了一些事情（这里属于此种情况）*/
 //    self.interactivePopGestureRecognizer.delegate = self;

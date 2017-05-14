@@ -45,7 +45,8 @@
     showPicture.topic = self.topic;
 //    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:showPicture animated:YES];
+    UITabBarController *tabBar = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [tabBar.selectedViewController pushViewController:showPicture animated:YES];
     
 }
 

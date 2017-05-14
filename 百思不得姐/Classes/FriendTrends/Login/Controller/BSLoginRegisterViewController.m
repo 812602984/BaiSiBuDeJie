@@ -31,6 +31,20 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     self.accountTextField.delegate = self.passwordTextField.delegate = self;
+    self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName:[UIColor grayColor]}];
+    
+    [self.passwordTextField addTarget:self action:@selector(editBegin:) forControlEvents:UIControlEventEditingDidBegin];
+    [self.passwordTextField addTarget:self action:@selector(editEnd:) forControlEvents:UIControlEventEditingDidEnd];
+}
+
+- (void)editBegin:(UITextField *)textField
+{
+    [textField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (void)editEnd:(UITextField *)textField
+{
+    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
