@@ -34,15 +34,29 @@ static const CGFloat margin = 5.0f;
     return _tagBtns;
 }
 
+- (void)setTextArr:(NSArray *)textArr
+{
+    _textArr = textArr;
+    for (int i = 0; i < textArr.count; i++) {
+        self.textField.text = textArr[i];
+        [self addTagClick];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"添加标签";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     
-    [self setupTextField];
     
     [self addTagBtn];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.textField becomeFirstResponder];
 }
 
 - (void)done
@@ -53,20 +67,22 @@ static const CGFloat margin = 5.0f;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-//添加textField
-- (void)setupTextField
+- (BSTagTextField *)textField
 {
-    BSTagTextField *textField = [[BSTagTextField alloc] init];
-    textField.delegate = self;
-    textField.width = BSScreenW;
-    textField.x = margin;
-    textField.y = 64;
-    textField.height = 30;
-    textField.font = [UIFont systemFontOfSize:14];
-    textField.placeholder = @"输入逗号或回车键也可以添加标签哦";
-    [textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
-    [self.view addSubview:textField];
-    self.textField = textField;
+    if (_textField == nil) {
+        BSTagTextField *textField = [[BSTagTextField alloc] init];
+        textField.delegate = self;
+        textField.width = BSScreenW;
+        textField.x = margin;
+        textField.y = 64;
+        textField.height = 30;
+        textField.font = [UIFont systemFontOfSize:14];
+        textField.placeholder = @"输入逗号或回车键也可以添加标签哦";
+        [textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
+        [self.view addSubview:textField];
+        _textField = textField;
+    }
+    return _textField;
 }
 
 - (void)textDidChange:(UITextField *)textField

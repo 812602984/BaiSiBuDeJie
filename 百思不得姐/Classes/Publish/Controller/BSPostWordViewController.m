@@ -31,6 +31,12 @@
     [self setupToolBar];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.textView becomeFirstResponder];
+}
+
 - (void)setupToolBar
 {
     BSAddTagToolBar *toolbar = [BSAddTagToolBar toolBar];

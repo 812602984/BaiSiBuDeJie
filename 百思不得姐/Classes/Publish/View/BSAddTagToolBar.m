@@ -51,6 +51,7 @@ static const CGFloat margin = 5;
 - (void)addButtonClick
 {
     BSAddTagViewController *tagVC = [[BSAddTagViewController alloc] init];
+    tagVC.textArr = [self.tagLabels valueForKeyPath:@"text"];
     __weak typeof(self) wself = self;
     [tagVC setTagsBlock:^(NSArray *tags){
         [wself createTagLabels:tags];
@@ -61,6 +62,9 @@ static const CGFloat margin = 5;
 
 - (void)createTagLabels:(NSArray *)tags
 {
+    [self.tagLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.tagLabels removeAllObjects];
+    
     for (int i = 0; i < tags.count; i++) {
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor blueColor];
