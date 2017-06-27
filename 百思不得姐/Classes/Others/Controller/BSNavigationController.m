@@ -86,4 +86,9 @@
     return self.childViewControllers.count > 1;
 }
 
+- (void)dealloc
+{
+    
+}
+
 @end

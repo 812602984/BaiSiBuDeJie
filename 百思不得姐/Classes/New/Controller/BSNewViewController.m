@@ -31,4 +31,9 @@
     BSLogFunc
 }
 
+- (void)dealloc
+{
+    
+}
+
 @end

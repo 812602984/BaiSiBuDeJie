@@ -71,17 +71,20 @@
         
         //根据帖子的模型计算cell高度
         if (self.type == BSTopicTypePicture) {  //图片
-            CGFloat pictureX = BSTopicCellMargin;
-            CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
-            CGFloat pictureW = maxSize.width;
-            CGFloat pictureH = self.height*pictureW/self.width;
-            if (pictureH >= BSPictureMaxH) { //如果图片过长
-                pictureH = BSPictureZoomH;
-                self.isZoom = YES;
-            }
-            _pictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
-            _cellHeight += pictureH + BSTopicCellMargin;
+            if (self.width != 0 && self.height != 0) {
+                CGFloat pictureX = BSTopicCellMargin;
+                CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
+                CGFloat pictureW = maxSize.width;
+                CGFloat pictureH = self.height*pictureW/self.width;
+                if (pictureH >= BSPictureMaxH) { //如果图片过长
+                    pictureH = BSPictureZoomH;
+                    self.isZoom = YES;
+                }
+                _pictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                
+                _cellHeight += pictureH + BSTopicCellMargin;
+            }
         }else if (self.type == BSTopicTypeVoice) {//音频
             CGFloat voiceX = BSTopicCellMargin;
             CGFloat voiceY = BSTopicCellTextY + textH + BSTopicCellMargin;

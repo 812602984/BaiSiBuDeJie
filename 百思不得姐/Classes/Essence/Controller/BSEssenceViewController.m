@@ -10,6 +10,7 @@
 #import "BSEssenceViewController.h"
 #import "BSRecommendTagsController.h"
 #import "BSTopicViewController.h"
+#import "BSAdvertiseViewController.h"
 
 @interface BSEssenceViewController ()<UIScrollViewDelegate>
 
@@ -30,11 +31,24 @@
 
     self.view.backgroundColor = BSGlobalBg;
     
+    [self registerNotifications];
     [self setupNav];
     [self setupClidVcs];
     [self setTitleView];
     [self setContentView];
 }
+
+- (void)registerNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAd) name:@"pushToAdNotification" object:nil];
+}
+
+- (void) pushToAd
+{
+    BSAdvertiseViewController *adVc = [[BSAdvertiseViewController alloc] init];
+    [self.navigationController pushViewController:adVc animated:YES];
+}
+
 
 - (void)setupClidVcs
 {
@@ -204,6 +218,11 @@
     NSInteger index = scrollView.contentOffset.x/scrollView.width;
     //点击按钮
     [self titleClick:self.titleView.subviews[index]];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

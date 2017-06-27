@@ -34,15 +34,6 @@ static const CGFloat margin = 5.0f;
     return _tagBtns;
 }
 
-- (void)setTextArr:(NSArray *)textArr
-{
-    _textArr = textArr;
-    for (int i = 0; i < textArr.count; i++) {
-        self.textField.text = textArr[i];
-        [self addTagClick];
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -51,6 +42,18 @@ static const CGFloat margin = 5.0f;
     
     
     [self addTagBtn];
+    
+    [self setupTags];
+}
+
+- (void)setupTags
+{
+    if (self.textArr.count) {
+        for (NSString *text in self.textArr) {
+            self.textField.text = text;
+            [self addTagClick];
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -235,6 +238,12 @@ static const CGFloat margin = 5.0f;
     if (!textField.hasText) {
         [self removeTagBtn:self.tagBtns.lastObject];
     }
+    
+}
+
+- (void)dealloc
+{
+    
 }
 
 @end

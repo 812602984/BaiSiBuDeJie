@@ -136,4 +136,9 @@ static CGFloat const BSAnimationIntension = 7;
     [self cancelWithCompletionBlock:nil];
 }
 
+-(void)dealloc
+{
+    
+}
+
 @end

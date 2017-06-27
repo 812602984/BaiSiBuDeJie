@@ -35,6 +35,8 @@
 {
     [super viewWillAppear:animated];
     [self.textView becomeFirstResponder];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillchangeframe:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (void)setupToolBar
@@ -45,7 +47,7 @@
     [self.view addSubview:toolbar];
     self.toolbar = toolbar;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillchangeframe:) name:UIKeyboardWillChangeFrameNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillchangeframe:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (void)keyboardwillchangeframe:(NSNotification *)noti
@@ -109,6 +111,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)dealloc
+{
+    
 }
 
 @end

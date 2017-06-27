@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400AA481F01438E00A6DF48 /* BSAdvertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400AA431F01438E00A6DF48 /* BSAdvertiseViewController.m */; };
+		0400AA491F01438E00A6DF48 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400AA461F01438E00A6DF48 /* AdView.m */; };
+		0400AA4A1F01438E00A6DF48 /* AdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0400AA471F01438E00A6DF48 /* AdView.xib */; };
 		0402FCD11EC01D1500212C36 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCCB1EC01D1500212C36 /* BSLoginRegisterViewController.m */; };
 		0402FCD21EC01D1500212C36 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0402FCCC1EC01D1500212C36 /* BSLoginRegisterViewController.xib */; };
 		0402FCD31EC01D1500212C36 /* BSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402FCCE1EC01D1500212C36 /* BSOAuthViewController.m */; };
@@ -91,6 +94,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400AA421F01438E00A6DF48 /* BSAdvertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAdvertiseViewController.h; sourceTree = "<group>"; };
+		0400AA431F01438E00A6DF48 /* BSAdvertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAdvertiseViewController.m; sourceTree = "<group>"; };
+		0400AA451F01438E00A6DF48 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
+		0400AA461F01438E00A6DF48 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
+		0400AA471F01438E00A6DF48 /* AdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdView.xib; sourceTree = "<group>"; };
 		0402FCCA1EC01D1500212C36 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
 		0402FCCB1EC01D1500212C36 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
 		0402FCCC1EC01D1500212C36 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -250,6 +258,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0400AA381F0141F700A6DF48 /* AdVertise */ = {
+			isa = PBXGroup;
+			children = (
+				0400AA411F01438E00A6DF48 /* Controller */,
+				0400AA441F01438E00A6DF48 /* View */,
+			);
+			path = AdVertise;
+			sourceTree = "<group>";
+		};
+		0400AA411F01438E00A6DF48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0400AA421F01438E00A6DF48 /* BSAdvertiseViewController.h */,
+				0400AA431F01438E00A6DF48 /* BSAdvertiseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0400AA441F01438E00A6DF48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0400AA451F01438E00A6DF48 /* AdView.h */,
+				0400AA461F01438E00A6DF48 /* AdView.m */,
+				0400AA471F01438E00A6DF48 /* AdView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0402FCC81EC01D1500212C36 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +365,7 @@
 		04D373D71E9931BD005894AD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0400AA381F0141F700A6DF48 /* AdVertise */,
 				04D373D81E9931BD005894AD /* Essence */,
 				04D373DE1E9931BD005894AD /* FriendTrends */,
 				04D373F21E9931BD005894AD /* New */,
@@ -761,6 +798,7 @@
 				04F4D8711EB87FE80089171C /* BSPublishView.xib in Resources */,
 				04CF3F141EA3A90700A852AC /* BSTopicVoiceView.xib in Resources */,
 				04F4D86F1EB87FE80089171C /* BSPublishViewController.xib in Resources */,
+				0400AA4A1F01438E00A6DF48 /* AdView.xib in Resources */,
 				04EF24271EA1CF7400A8917A /* BSTopicShowPictureController.xib in Resources */,
 				04BFD6D91E97D05A00BBA029 /* Assets.xcassets in Resources */,
 				04F4D85E1EB825DF0089171C /* BSWebViewController.xib in Resources */,
@@ -823,6 +861,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C163111EA0807D0027A5CA /* BSTopicPictureView.m in Sources */,
+				0400AA481F01438E00A6DF48 /* BSAdvertiseViewController.m in Sources */,
 				04B8FE151E9A547200D0A1B8 /* BSRecommendCategory.m in Sources */,
 				0402FCDC1EC027F000212C36 /* BSAccountTool.m in Sources */,
 				04B8FE191E9A583900D0A1B8 /* BSRecommendCategoryCell.m in Sources */,
@@ -855,6 +894,7 @@
 				04EF242A1EA1D40600A8917A /* BSProgressView.m in Sources */,
 				04A887D61EB5DBF700A5F5D3 /* BSTopWindow.m in Sources */,
 				04DAA2641E9BB06700728B9C /* BSRecommendTagsController.m in Sources */,
+				0400AA491F01438E00A6DF48 /* AdView.m in Sources */,
 				04F4D86E1EB87FE80089171C /* BSPublishViewController.m in Sources */,
 				0402FCD31EC01D1500212C36 /* BSOAuthViewController.m in Sources */,
 				042904421EB6CF22008E2D3D /* UIImage+BSExtension.m in Sources */,
